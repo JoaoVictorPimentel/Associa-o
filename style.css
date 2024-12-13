@@ -188,7 +188,6 @@ body {
     }
 }
 
-/* Sessão genérica */
 .section-container {
     padding: 20px;
     max-width: 1200px;
@@ -244,7 +243,7 @@ body {
     }
 }
 
-/* Seção de Localidade/Contato */
+/* Localidade/Contato */
 #contato {
     display: flex;
     flex-wrap: wrap;
@@ -254,7 +253,6 @@ body {
     border-top: 2px solid #ccc;
 }
 
-/* Contêiner do mapa */
 .contato-container {
     display: flex;
     flex-direction: row;
@@ -312,5 +310,69 @@ body {
 
     .info-container {
         padding: 1rem;
+    }
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: white; 
+    padding: 20px 0;
+    font-size: 14px;
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-logo span {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-links {
+    margin: 10px 0;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #f39c12; 
+}
+
+.footer-copy p {
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links {
+        display: flex;
+        flex-direction: row;
+        gap: 10px; 
+        justify-content: center;
+    }
+
+    .footer-links a {
+        margin: 5px 0;
     }
 }
