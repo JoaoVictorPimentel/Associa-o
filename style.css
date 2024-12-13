@@ -1,4 +1,4 @@
-/* Header */
+/* Global */
 * {
     margin: 0;
     padding: 0;
@@ -7,8 +7,12 @@
 
 body {
     font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+    max-width: 100vw;
+    overflow-x: hidden;
 }
 
+/* Header */
 .header {
     display: flex;
     justify-content: space-between;
@@ -16,6 +20,8 @@ body {
     background-color: #333;
     color: #fff;
     padding: 20px 20px;
+    position: relative; /* Remover qualquer fixação no topo, permitindo rolagem */
+    z-index: 1000;
 }
 
 .logo {
@@ -32,6 +38,13 @@ body {
     color: #fff;
     text-decoration: none;
     font-size: 1.2rem;
+    transition: color 0.3s ease, transform 0.3s ease; 
+}
+
+.nav a:hover {
+    color: #f0c419; 
+    transform: scale(1.1); 
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); 
 }
 
 .hamburger {
@@ -51,9 +64,6 @@ body {
     display: none;
     flex-direction: column;
     background-color: #333;
-    position: absolute;
-    top: 60px;
-    left: 0;
     width: 100%;
     padding: 10px;
 }
@@ -64,6 +74,13 @@ body {
     text-decoration: none;
     color: white;
     font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.mobile-menu a:hover {
+    background-color: #444;
 }
 
 @media (max-width: 768px) {
@@ -84,6 +101,8 @@ body {
     }
 }
 
+
+
 /* Sobre */
 #sobre {
     display: flex;
@@ -93,22 +112,34 @@ body {
     padding: 20px;
     max-width: 1200px;
     margin: auto;
+    border-bottom: 1px solid #000;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-/* Estilização da seção "sobre" */
+.sobre-titulo {
+    font-family: 'Poppins', sans-serif; 
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
 .sobre-container {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    height: 100vh;
     padding: 20px;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
 }
 
-/* Texto à esquerda */
 .sobre-texto {
-    max-width: 45%; /* Reduz o espaço máximo do texto */
-    padding: 20px 60px 20px 20px; /* Adiciona mais padding no lado direito */
-    text-align: left; /* Garante alinhamento à esquerda */
+    max-width: 45%; 
+    padding: 20px; 
+    text-align: left; 
 }
 
 .sobre-texto h1 {
@@ -121,25 +152,23 @@ body {
     color: #555;
 }
 
-/* Imagem à direita */
 .sobre-imagem {
     flex: 1;
     max-width: 50%;
     display: flex;
-
 }
 
 .sobre-imagem img {
     width: 100%;
-    height: 70vh;
+    height: auto;
+    max-height: 70vh;
     object-fit: cover;
     border-radius: 8px;
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
     .sobre-container {
-        flex-direction: column-reverse; /* Inverte a ordem dos elementos */
+        flex-direction: column-reverse; 
         height: auto;
     }
 
@@ -155,7 +184,133 @@ body {
 
     .sobre-imagem img {
         width: 100%;
-        height: 40vh; /* Define a altura para 40% da viewport */
-        object-fit: cover;
+        height: auto;
+    }
+}
+
+/* Sessão genérica */
+.section-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+    border-bottom: 1px solid #000;
+    height: auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* História e Emenda */
+.historia-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.sobre-imagens {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.imagens-linha {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.imagens-linha img, 
+.imagem-centralizada img {
+    width: 45%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.imagem-centralizada img {
+    width: 50%;
+    margin-top: 10px;
+    display: block;
+    margin: auto;
+}
+
+@media (max-width: 768px) {
+    .imagens-linha img {
+        width: 100%;
+    }
+
+    .imagem-centralizada img {
+        width: 80%;
+    }
+}
+
+/* Seção de Localidade/Contato */
+#contato {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    border-top: 2px solid #ccc;
+}
+
+/* Contêiner do mapa */
+.contato-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.map-container {
+    flex: 1;
+    height: 300px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.info-container {
+    flex: 1;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
+
+.info-container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333333;
+}
+
+.info-container .info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: #555;
+}
+
+.info-item i {
+    font-size: 1.5rem;
+    color: #f0c419;
+    margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+    .contato-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .map-container {
+        height: 200px;
+    }
+
+    .info-container {
+        padding: 1rem;
     }
 }

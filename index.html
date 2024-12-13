@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <title>Associação</title>
 </head>
 
@@ -12,11 +13,11 @@
     <header class="header">
         <div class="logo">Logo</div>
         <nav class="nav">
-            <a href="#">Sobre</a>
-            <a href="#">História</a>
-            <a href="#">Serviços</a>
-            <a href="#">Emenda</a>
-            <a href="#">Contato</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#historia">História</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#emenda">Emenda</a>
+            <a href="#contato">Contato/Localização</a>
         </nav>
         <div class="hamburger" onclick="toggleMenu()">
             <div></div>
@@ -25,31 +26,21 @@
         </div>
     </header>
     <div class="mobile-menu" id="mobileMenu">
-        <a href="#">Sobre</a>
-        <a href="#">História</a>
-        <a href="#">Serviços</a>
-        <a href="#">Emenda</a>
-        <a href="#">Contato</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#historia">História</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#emenda">Emenda</a>
+        <a href="#contato">Contato/Localização</a>
     </div>
 
     <main>
         <section id="sobre">
             <div class="sobre-container">
                 <div class="sobre-texto">
-                    <h1>Bem-vindo à Associação</h1>
+                    <h1 class="sobre-titulo">Agência de transporte intermunicipal de São Miguel dos Campos</h1>
                     <p>
                         Lorem ipsum dolor sit amet. Ut quisquam dolore ut sapiente blanditiis id enim ipsam vel maiores
-                        dolorem est delectus voluptas qui perferendis deleniti. Aut internos magnam qui sint quasi est
-                        aperiam inventore quo rerum omnis et quia quia.
-
-                        Aut tenetur aliquid a laudantium tenetur eum corrupti magnam et iure quia qui debitis atque est
-                        dolore optio. Est neque sint 33 dolor quos non rerum ipsam in magnam internos.
-
-                        Eos doloremque quaerat non atque perferendis id voluptatem itaque At maxime nihil a nihil
-                        numquam. Et quia expedita ut voluptatem nulla sed dolores iure ea sint omnis et galisum nesciunt
-                        et neque sequi nam dolores totam. Sit repellendus dolorum qui perspiciatis veritatis ab dolorem
-                        architecto sed laborum labore et sint quidem! In error animi ab itaque laudantium ut sapiente
-                        consequatur ut repellat repudiandae.
+                        dolorem est delectus voluptas qui perferendis deleniti...
                     </p>
                 </div>
                 <div class="sobre-imagem">
@@ -57,6 +48,84 @@
                 </div>
             </div>
         </section>
+
+        <section id="historia" class="section-container">
+            <div class="historia-container">
+                <div class="sobre-texto">
+                    <h2>História da Associação</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dictum, magna id sodales
+                        sollicitudin,
+                        erat orci aliquet justo, sed suscipit eros nisl et augue.
+                    </p>
+                </div>
+                <div class="sobre-imagens">
+                </div>
+            </div>
+        </section>
+
+        <section id="servicos" class="section-container">
+            <div class="sobre-container">
+                <div class="sobre-texto">
+                    <h2>Nossos Serviços</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dictum, magna id sodales
+                        sollicitudin,
+                        erat orci aliquet justo, sed suscipit eros nisl et augue.
+                    </p>
+                </div>
+                <div class="sobre-imagem">
+                    <img src="imgs/download.jpeg" alt="Imagem representativa" />
+                </div>
+            </div>
+        </section>
+
+
+        <section id="emenda" class="section-container">
+            <div class="sobre-container">
+                <div class="sobre-texto">
+                    <h2>Emenda Parlamentar</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vehicula metus nec orci
+                        accumsan, nec
+                        facilisis nisi tristique.
+                    </p>
+                </div>
+                <div class="sobre-imagem">
+                    <img src="imgs/download.jpeg" alt="Imagem representativa" />
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="section-container">
+            <div class="contato-container">
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509826!2d144.953735415316!3d-37.81627944202138!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0x5045675218ce6e0!2sVictoria%2C%20Australia!5e0!3m2!1sen!2sus!4v1678360297073!5m2!1sen!2sus"
+                        width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+        
+                <div class="info-container">
+                    <h2>Localidade</h2>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Rua Exemplo, 123 - Centro, São Miguel dos Campos - AL</p>
+                    </div>
+        
+                    <h2>Contato</h2>
+                    <div class="info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <p>(82) 1234-5678</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <p>(82) 98765-4321</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
     </main>
 
     <script src="script.js"></script>
