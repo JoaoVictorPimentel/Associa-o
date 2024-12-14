@@ -271,13 +271,14 @@ body {
 }
 
 .imagem-centralizada img {
-    width: 50%;
+    width: 100%;
     margin-top: 10px;
     display: block;
     margin: auto;
 }
 
 @media (max-width: 768px) {
+    
     .imagens-linha img {
         width: 100%;
     }
